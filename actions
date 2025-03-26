@@ -1,0 +1,49 @@
+Basic Commands: 
+    put arm down
+    put arm up
+    spin roller forward
+    spin roller backwards
+    stop roller spin
+    drive
+
+
+Compound Commands:
+
+    Pick Up Algae:
+
+        PREREQUISITES:
+            robot has not collected Coral or Algae
+
+        put arm down
+        spin roller backwards
+        drive forward
+        stop roller spin
+        put arm up
+
+    Collect Coral From Station:
+
+        PREREQUISITES:
+            has not collected Coral or Algae
+
+        drive to Station
+
+        if arm is not up:
+            put arm up
+        
+    Put Coral In Reef:
+
+        PREREQUISITES:
+            robot collected an coral and has it in storage
+
+        drive to reef
+        spin roller forward
+    
+    Put Algae In Processor:
+        
+        PREREQUISITES:
+            robot collected an Algae and has it in storage
+
+        drive to processor
+        spin roller backwards
+
+        
