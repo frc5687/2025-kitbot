@@ -43,6 +43,9 @@ Compound Commands:
         PREREQUISITES:
             robot collected an Algae and has it in storage
 
+        if arm not up:
+            put arm up
+
         drive to processor
         spin roller backwards
 
