@@ -247,4 +247,37 @@ public class Constants {
         }
     }
 
+    public class Elevator{
+        public static final String CANBUS = "CANivore";
+
+        public static final int NUM_MOTORS = 2;
+        public static final DCMotor MOTOR = DCMotor.getKrakenX60Foc(NUM_MOTORS);
+        public static final double GEAR_RATIO = (84.0 / 9.0);
+        public static final double MASS = 13.6078; // kg
+        public static final double DRUM_RADIUS = Units.inchesToMeters(2.25 / 2); // m
+
+        // Maximum and minimum elevator heights
+        public static final double MAX_HEIGHT = 0.0;
+        public static final double MIN_HEIGHT = 0.0;
+        
+        public static final double MOTION_MAGIC_EXPO_KV = 0.03;
+        public static final double MOTION_MAGIC_EXPO_KA = 0.035;
+
+        // Elevator PID, still needs to be tuned
+        public static final double kP = 100.0;
+        public static final double kI = 0.0;
+        public static final double kD = 3.0;
+        public static final double kS = 2.0;
+        public static final double kG = 5.0;
+        public static final double kV = 0.0;
+        public static final double kA = 0.0;
+
+        public static final boolean EAST_INVERTED = false;
+        public static final boolean WEST_INVERTED = false;
+
+        public static final double CURRENT_LIMIT = 60.0;
+
+}       
+
 }
+
