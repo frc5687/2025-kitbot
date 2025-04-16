@@ -18,14 +18,14 @@ public class RobotMap {
 
             // Ordered in order of CAN connection in loop.
 
-            public static final int SOUTH_EAST_ROTATION = 0;
-            public static final int SOUTH_EAST_TRANSLATION = 1;
+            public static final int SOUTH_EAST_ROTATION = 1;
+            public static final int SOUTH_EAST_TRANSLATION = 0;
             public static final int NORTH_EAST_ROTATION = 2;
             public static final int NORTH_EAST_TRANSLATION = 3;
             public static final int NORTH_WEST_ROTATION = 4;
             public static final int NORTH_WEST_TRANSLATION = 5;
-            public static final int SOUTH_WEST_ROTATION = 6;
-            public static final int SOUTH_WEST_TRANSLATION = 7;
+            public static final int SOUTH_WEST_ROTATION = 7;
+            public static final int SOUTH_WEST_TRANSLATION = 6;
         }
 
         public static class CANCODER {

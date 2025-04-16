@@ -180,22 +180,22 @@ public class Constants {
          *
          */
         public static final SwerveModuleConfig NW_CONFIG =
-                SwerveModule.createModuleConfig("NW", -0.474609375, false, false);
+                SwerveModule.createModuleConfig("NW", 0.08935546875, false, false);
         public static final SwerveModuleConfig NE_CONFIG =
-                SwerveModule.createModuleConfig("NE", 0.1811524, false, false);
+                SwerveModule.createModuleConfig("NE", 0.4208984375, false, false);
         public static final SwerveModuleConfig SW_CONFIG =
-                SwerveModule.createModuleConfig("SW", -0.0573731, false, false);
+                SwerveModule.createModuleConfig("SW", 0.359619140625, false, false);
         public static final SwerveModuleConfig SE_CONFIG =
-                SwerveModule.createModuleConfig("SE", 0.3584248, false, false);
+                SwerveModule.createModuleConfig("SE", -0.406982421875, false, false);
 
         public static final SwerveModuleConfig SIM_NW_CONFIG =
-                SwerveModule.createSimModuleConfig("NW", -0.474609375, false, false);
+                SwerveModule.createSimModuleConfig("NW", 0.08935546875, false, false);
         public static final SwerveModuleConfig SIM_NE_CONFIG =
-                SwerveModule.createSimModuleConfig("NE", 0.1811524, false, false);
+                SwerveModule.createSimModuleConfig("NE", 0.4208984375, false, false);
         public static final SwerveModuleConfig SIM_SW_CONFIG =
-                SwerveModule.createSimModuleConfig("SW", -0.0573731, false, false);
+                SwerveModule.createSimModuleConfig("SW", 0.359619140625, false, false);
         public static final SwerveModuleConfig SIM_SE_CONFIG =
-                SwerveModule.createSimModuleConfig("SE", 0.3584248, false, false);
+                SwerveModule.createSimModuleConfig("SE", -0.406982421875, false, false);
 
         public static final SwerveModuleConfig[] MODULE_CONFIGS = {
             NW_CONFIG, NE_CONFIG, SW_CONFIG, SE_CONFIG
