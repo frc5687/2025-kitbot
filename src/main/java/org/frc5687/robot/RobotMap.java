@@ -29,6 +29,10 @@ public class RobotMap {
             
             public static final int EAST_ELEVATOR = 8;
             public static final int WEST_ELEVATOR = 9;
+
+            public static final int ALGAE_WHEEL = 50;
+
+            
         }
 
         public static class CANCODER {
@@ -36,12 +40,13 @@ public class RobotMap {
                 public static final int ENCODER_NE = 1;
                 public static final int ENCODER_NW = 2;
                 public static final int ENCODER_SW = 3;
+                public static final int ALGAE_ENCODER = 50;
+
         }
 
         public static class PIGEON {
             public static final int PIGEON = 0;
         }
-
     }
 
     /**
@@ -50,7 +55,9 @@ public class RobotMap {
      * PWM only one device can connect to each port, so the numbers should be
      * unique.
      */
-    public static class PWM {}
+    public static class PWM {
+       public static final int ALGAE_PIVOT_MOTOR = 50;
+    }
 
     /**
      * There should be an entry here for each PCM port, preferrably in numerical
@@ -88,4 +95,6 @@ public class RobotMap {
     public static class DIO {
         // IS THIS A 5687 REFERENCE?!?!?!?!?!?!?
     }
+
+    
 }
