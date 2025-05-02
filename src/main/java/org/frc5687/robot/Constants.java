@@ -16,6 +16,7 @@ import edu.wpi.first.wpilibj.simulation.SingleJointedArmSim;
 import java.util.Optional;
 
 import org.frc5687.robot.subsystems.drive.modules.SwerveModuleConfig;
+import org.frc5687.robot.subsystems.elevator.ElevatorState;
 import org.frc5687.robot.util.PIDConstants;
 
 // import edu.wpi.first.math.util.Units;
@@ -145,11 +146,11 @@ public class Constants {
     public static class DriveTrain {
         public static final String CAN_BUS = "DriveTrain";
         public static final int NUM_MODULES = 4;
-        public static final double ROBOT_WEIGHT = Units.lbsToKilograms(140.0);
+        public static final double ROBOT_WEIGHT = Units.lbsToKilograms(50.0);
 
         // Size of the wheelbase in meters
-        public static final double WIDTH = 0.635; // meters
-        public static final double LENGTH = 0.635; // meters
+        public static final double WIDTH = 0.5842; // meters
+        public static final double LENGTH = 0.5842; // meters
         // Distance of swerve modules from center of robot
         public static final double SWERVE_NS_POS = LENGTH / 2.0;
         public static final double SWERVE_WE_POS = WIDTH / 2.0;
@@ -157,14 +158,13 @@ public class Constants {
         public static final double ROBOT_RADIUS = Math.sqrt(WIDTH * WIDTH + LENGTH * LENGTH) / 2.0;
 
         // The motors can only go 85% speed under load
-        public static final double EFFICIENCY = 0.90;
+        public static final double EFFICIENCY = 0.60;
         public static final double MAX_MPS =
                 DCMotor.getKrakenX60Foc(1)
                                 .withReduction(Constants.SwerveModule.GEAR_RATIO_DRIVE)
                                 .freeSpeedRadPerSec
                         * SwerveModule.WHEEL_RADIUS
                         * EFFICIENCY;
-
         public static final double MAX_ANG_VEL = 2.0 * Math.PI; // Max rotation rate of robot (rads/s)
         public static final double MAX_ANG_ACC =
                 2.0 * Math.PI; // Max angular acceleration of robot (rads/s^2)
@@ -277,7 +277,37 @@ public class Constants {
 
         public static final double CURRENT_LIMIT = 60.0;
 
-}       
+}
+
+public class AlgaeArm{
+        public static final double kP = 20.0; // 13
+        public static final double kI = 0.0;
+        public static final double kD = 0.0;
+
+        public static final boolean PIVOT_MOTOR_INVERTED = true;
+        public static final int NUM_MOTORS = 1;
+
+        public static final boolean WHEEL_MOTOR_INVERTED = false;
+        public static final double WHEEL_CURRENT_LIMIT = 20.0;
+
+        public static final double ENCODER_OFFSET = -0.67467;
+
+        public static final double BOTTOM_EJECT_SAFE_ANGLE = 2.22;
+        public static final double TOP_EJECT_SAFE_ANGLE = 1.5;
+        public static final DCMotor GEARBOX = DCMotor.getBag(1);
+        public static final double GEAR_RATIO = 315; // From Amory
+        public static final double ARM_LENGTH = 0.589;
+        public static final double ARM_MASS = Units.lbsToKilograms(9);
+        public static final double MOI_ARM = SingleJointedArmSim.estimateMOI(ARM_LENGTH, ARM_MASS);
+        public static final double MIN_ANGLE = Units.degreesToRadians(90);
+        public static final double MAX_ANGLE = Units.degreesToRadians(270.0);
+
+        public static final double MAX_VELOCITY_RAD_PER_SEC = GEARBOX.freeSpeedRadPerSec / GEAR_RATIO;
+        public static final double MAX_ACCELERATION_RAD_PER_SEC_SQUARED = 10.0 * Math.PI;
+
+        public static final double FILTER_TIME_CONSTANT = 0.04;
+    }
+
 
 }
 
