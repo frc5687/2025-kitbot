@@ -47,7 +47,7 @@ public class HardwareElevatorIO implements ElevatorIO {
     private TunableDouble _positionDifferenceThreshold =
             new TunableDouble("Elevator", "PositionDifferenceThreshold", 0.05);
 
-    public HardwareElevatorIO(int eastMotorId, int westMotorId, int laserCanId) {
+    public HardwareElevatorIO(int eastMotorId, int westMotorId) {
         // _laserCan = new LaserCan(laserCanId);
 
         _eastMotor = new TalonFX(eastMotorId, Constants.Elevator.CANBUS);

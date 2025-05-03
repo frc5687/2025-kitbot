@@ -113,6 +113,5 @@ public class ReefAlignmentHelpers {
 
         return new Pose2d(finalPosition, basePose.getRotation());
     }
-
     
     }
