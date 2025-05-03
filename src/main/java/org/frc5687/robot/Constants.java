@@ -252,8 +252,8 @@ public class Constants {
 
         public static final int NUM_MOTORS = 2;
         public static final DCMotor MOTOR = DCMotor.getKrakenX60Foc(NUM_MOTORS);
-        public static final double GEAR_RATIO = (84.0 / 9.0);
-        public static final double MASS = 13.6078; // kg
+        public static final double GEAR_RATIO = (9.0 / 1.0);
+        public static final double MASS = 0.226796; // kg
         public static final double DRUM_RADIUS = Units.inchesToMeters(2.25 / 2); // m
 
         // Maximum and minimum elevator heights
